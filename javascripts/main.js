@@ -37,8 +37,8 @@ validator.registerCallback('is_wikipedia', function(value) {
 
 var tvGuideSubmit = function(event){
 	event.preventDefault();
-	// var myurl = "https://wiki-scripts.herokuapp.com/v1/wiki?url=" + $("#tv_guide_input").val();
-	var myurl = "http://localhost:3000/v1/wiki?url=" + $("#tv_guide_input").val();
+	var myurl = "https://wiki-scripts.herokuapp.com/v1/wiki?url=" + $("#tv_guide_input").val();
+	// var myurl = "http://localhost:3000/v1/wiki?url=" + $("#tv_guide_input").val();
 	$.ajax({url: myurl, success: function(result){
 		download(result);
   }});
