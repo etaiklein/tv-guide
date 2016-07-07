@@ -7,46 +7,56 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
     <script type="text/javascript" src="javascripts/validate.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 
-    <title>Wiki-scripts by etaiklein</title>
+    <title>TV Guide by etaiklein</title>
   </head>
 
   <body>
 
     <header>
       <div class="container">
-        <h1>Wiki-scripts</h1>
-        <h2>Utilities and scripts using wikipedia&#39;s data</h2>
-
-        <section id="downloads">
-          <a href="https://github.com/etaiklein/wiki-scripts" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
-        </section>
+        <h1>TV Guide
+          <a style="float: right" href="https://github.com/etaiklein/tv-guide" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </h1>
+        <h2>Calendar events for new episodes.</h2>
       </div>
     </header>
 
     <div class="container">
       <section id="main_content">
-        <h2> 
-          TV Guide: Calendar events for new episodes.
-        </h2>
 
         <form name="tv_guide_form">
-          <input id="tv_guide_input" placeholder="https://en.wikipedia.org/wiki/List_of_Adventure_Time_episodes">
+          <input id="tv_guide_input" placeholder="https://en.wikipedia.org/wiki/List_of_Adventure_Time_episodes" value="https://en.wikipedia.org/wiki/List_of_Adventure_Time_episodes">
           </input>
-
           <input id="tv_guide_submit" type="submit" value="Submit">
         </form>
+
+        <br>
+        
+        <h4> 
+          Instructions:
+          <ul>
+            <li><b>Enter</b> a "list of episodes" wiki page</li>
+            <li><b>Submit</b> to download a .ics (calendar) file</li> 
+            <li><b>Import</b> into your calendar app</li> 
+          </ul>
+        </h4>
 
       </section>
     </div>
 
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">TV Guide maintained by <a href="https://github.com/etaiklein">etaiklein</a>. Web compatible only.</p>
+      </footer>
+    </div>
     
     <script type="text/javascript" src="javascripts/main.js"></script>
   </body>
+
 </html>
