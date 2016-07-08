@@ -10,3 +10,48 @@
 html {
   zoom: 150%;
 }
+
+.instructions {
+  font-size: 18px;
+  font-weight: bold;
+  color: #666;
+  letter-spacing: -0.03em;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1),
+               0 0 5px rgba(181, 232, 83, 0.1),
+               0 0 10px rgba(181, 232, 83, 0.1);
+}
+
+#main_content {
+	height: 100%;
+	vertical-align: middle
+} 
+
+/* Footer */
+footer {
+  bottom:0;
+  left:0;
+  margin-top: 5px;
+  background: #151515 url("../images/bkg.png") 0 0;
+  color: #eaeaea;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  z-index: -1;
+}
+
+footer a {
+  color: #b5e853;
+}
+
+footer p {
+  color: #666;
+  font-size: 10px;
+  font-weight: 300;
+}
+
+@media screen and (max-height: 400px) {
+  footer  {
+    opacity: 0;
+    transition: opacity 0.2s linear;
+  }
+}

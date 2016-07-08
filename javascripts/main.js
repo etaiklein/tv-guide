@@ -11,9 +11,7 @@ var validator = new FormValidator('tv_guide_form', [{
 }], function(errors, event) {
   
   if (errors.length > 0) {
-    // Show the errors
     for (var error of errors) {
-      console.log(error.message);
       toastr.error(error.message);
     }
   }
@@ -43,25 +41,12 @@ var tvGuideSubmit = function(event){
     error: function(error){
       if (error.status == 200){
         toastr.success(error.responseText);
-      } else {
-        toastr.info("Something went wrong!");
       }
     }
   });
 }
 
 var download = function(data) {
-  var filename = "tv-guide.ics";
-  var blob = new Blob([data], {type: 'text/calendar'});
-  if(window.navigator.msSaveOrOpenBlob) {
-    window.navigator.msSaveBlob(blob, filename);
-  }
-  else{
-    var elem = window.document.createElement('a');
-    elem.href = window.URL.createObjectURL(blob);
-    elem.download = filename;        
-    document.body.appendChild(elem)
-    elem.click();        
-    document.body.removeChild(elem);
-  }
+  var uriContent = "data:text/calendar," + encodeURIComponent(data);
+  location.href = uriContent;
 }

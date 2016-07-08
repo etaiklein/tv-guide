@@ -20,9 +20,7 @@
 
     <header>
       <div class="container">
-        <h1>TV Guide
-          <a style="float: right" href="https://github.com/etaiklein/tv-guide" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
-        </h1>
+        <h1>TV Guide</h1>
         <h2>Calendar events for new episodes.</h2>
       </div>
     </header>
@@ -30,29 +28,22 @@
     <div class="container">
       <section id="main_content">
 
-        <form name="tv_guide_form">
+        <div class="instructions"> 
+          Enter a "list of episodes" wiki:
+        </div>
+        <form id="tv_guide_form" name="tv_guide_form">
           <input id="tv_guide_input" placeholder="https://en.wikipedia.org/wiki/List_of_Steven_Universe_episodes" value="https://en.wikipedia.org/wiki/List_of_Steven_Universe_episodes">
           </input>
           <input id="tv_guide_submit" type="submit" value="Submit">
         </form>
-
-        <br>
-        
-        <h4> 
-          Instructions:
-          <ul>
-            <li><b>Enter</b> a "list of episodes" wiki page</li>
-            <li><b>Submit</b> to download a .ics (calendar) file</li> 
-            <li><b>Import</b> into your calendar app</li> 
-          </ul>
-        </h4>
 
       </section>
     </div>
 
     <div id="footer_wrap" class="outer">
       <footer class="inner">
-        <p class="copyright">TV Guide maintained by <a href="https://github.com/etaiklein">etaiklein</a>. Web compatible only.</p>
+        <p class="copyright">TV Guide maintained by <a href="https://github.com/etaiklein">etaiklein</a>.
+        View on <a href="https://github.com/etaiklein/tv-guide">Github</a>. Web compatible only.</p>
       </footer>
     </div>
     

@@ -75,30 +75,6 @@ header h2 {
   margin: 0;
 }
 
-/* Footer
-*/
-
-footer {
-  bottom:0;
-  left:0;
-  margin-top: 5px;
-  background: #151515 url("../images/bkg.png") 0 0;
-  color: #eaeaea;
-  position: fixed;
-  text-align: center;
-  width: 100%;
-}
-
-footer a {
-  color: #b5e853;
-}
-
-footer p {
-  color: #666;
-  font-size: 14px;
-  font-weight: 300;
-}
-
 /* Main Content
 */
 
