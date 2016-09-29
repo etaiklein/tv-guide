@@ -33,7 +33,7 @@ validator.registerCallback('is_wikipedia', function(value) {
 var tvGuideSubmit = function(event){
 	event.preventDefault();
 	var myurl = "https://wiki-scripts.herokuapp.com/v1/wiki?url=" + $("#tv_guide_input").val();
-	// var myurl = "http://localhost:3000/v1/wiki?url=" + $("#tv_guide_input").val();
+  // var myurl = "http://localhost:3000/v1/wiki/?url=" + $("#tv_guide_input").val();
 	$.ajax({url: myurl, 
     success: function(result){
       download(result);
@@ -41,6 +41,30 @@ var tvGuideSubmit = function(event){
     error: function(error){
       if (error.status == 200){
         toastr.success(error.responseText);
+      }
+    }
+  });
+}
+
+function getParameterByName(name, url = window.location.href) {
+  name = name.replace(/[\[\]]/g, "\\$&");
+  var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+      results = regex.exec(url);
+  if (!results) return null;
+  if (!results[2]) return '';
+  return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+
+var tvGuideQuery = function(){
+  var myurl = "https://wiki-scripts.herokuapp.com/v1/wiki/calendar?title=" + getParameterByName("title");
+  // var myurl = "http://localhost:3000/v1/wiki/calendar?title=" + getParameterByName("title");
+  $.ajax({url: myurl, 
+    success: function(result){
+      download(result);
+    },
+    error: function(error){
+      if (error.status == 200){
       }
     }
   });
