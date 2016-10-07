@@ -1,9 +1,9 @@
-#tv_guide_input {
+.tv_guide_input {
   width: 80%;
   font-size: 16px;
 }
 
-#tv_guide_submit {
+.tv_guide_submit {
   font-size: 16px;
 }
 
@@ -11,14 +11,41 @@ html {
   zoom: 150%;
 }
 
-.instructions {
-  font-size: 18px;
+#results {
+  font-size: 10px;
+}
+
+#secondary_content {
+  display: flex;
+}
+
+.blur {
   font-weight: bold;
-  color: #666;
   letter-spacing: -0.03em;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1),
                0 0 5px rgba(181, 232, 83, 0.1),
                0 0 10px rgba(181, 232, 83, 0.1);
+}
+
+.instructions {
+  font-size: 18px;
+  color: #eaeaea;
+}
+
+.instructions > div, #results {
+  font-size: 10px;
+  color: #666;
+}
+
+.half-width {
+  width: 50%;
+}
+
+.hidden {
+  height: 0;
+  width: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 #main_content {
@@ -36,11 +63,6 @@ footer {
   position: fixed;
   text-align: center;
   width: 100%;
-  z-index: -1;
-}
-
-footer a {
-  color: #b5e853;
 }
 
 footer p {

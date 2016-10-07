@@ -10,7 +10,6 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
-    <script type="text/javascript" src="javascripts/validate.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 
     <title>TV Guide by etaiklein</title>
@@ -20,22 +19,55 @@
 
     <header>
       <div class="container">
-        <h1>TV Guide</h1>
-        <h2>Calendar events for new episodes.</h2>
+        <h1 class="blur">TV Guide</h1>
+        <h2 class="blur">A Calendar event for each new episode.</h2>
       </div>
     </header>
 
     <div class="container">
       <section id="main_content">
 
-        <div class="instructions"> 
-          Enter a "list of episodes" wiki:
+        <div class="instructions blur"> 
+          Enter a Show Name like 'Steven Universe'
+          <div>or a "List of Episodes" wiki like 'https://en.wikipedia.org/wiki/List_of_Steven_Universe_episodes':</div>
         </div>
-        <form id="tv_guide_form" name="tv_guide_form">
-          <input id="tv_guide_input" placeholder="https://en.wikipedia.org/wiki/List_of_Steven_Universe_episodes" value="https://en.wikipedia.org/wiki/List_of_Steven_Universe_episodes">
-          </input>
-          <input id="tv_guide_submit" type="submit" value="Submit">
-        </form>
+
+        <input class="tv_guide_input" id="tv_guide_input" placeholder="https://en.wikipedia.org/wiki/List_of_Steven_Universe_episodes" value="Steven Universe">
+        </input>
+        <input class="tv_guide_submit" id="tv_guide_submit" type="submit" value="Submit">
+
+
+        <div id="results" class="blur hidden">
+          Your tv-guide(s):
+        </div>
+
+      </section>
+
+      <section id="secondary_content">
+        <div class="half-width" id="recently_searched">
+          <div class="instructions blur">
+            Recently searched shows
+              <div id="recent">
+              </div>
+          </div>
+        </div>
+        
+        <div class="half-width" id="add_to_google_calendar">
+          <div id="google_instructions" class="instructions blur">
+            Add To Google Calendar 
+            <div>for Nightly Schedule Updates</div>
+            <div>
+              <ol>
+                <li>Go to <a href="https://calendar.google.com">Google Calendar</a></li>
+                <li>In the left column, click on the Add link in the Other Calendars section.</li>
+                <li>From the menu select Add by URL.</li>
+                <li>Enter the URL in the dialog box then click Add Calendar.</li>
+                <li>See <a href="http://visihow.com/Use_webcal_url_to_add_a_calendar_to_google_calendar"> visual instructions</a> for more details</li>
+              </ol>
+            </div>
+          </div>
+
+        </div>
 
       </section>
     </div>
