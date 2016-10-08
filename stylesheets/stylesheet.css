@@ -32,7 +32,7 @@ html {
   color: #eaeaea;
 }
 
-.instructions > div, #results {
+.instructions > div, .instructions > span, #results {
   font-size: 10px;
   color: #666;
 }
