@@ -6,8 +6,8 @@ toastr.options = {
 }
 
 //set the base url for development or production
-const baseURL = "http://localhost:3000/v1/" //development
-// const baseURL = "https://wiki-scripts.herokuapp.com/v1/" //production
+// const baseURL = "http://localhost:3000/v1/" //development
+const baseURL = "https://wiki-scripts.herokuapp.com/v1/" //production
 
 //append the 10 most recently queried shows to the 'recent' list
 $.ajax({url: baseURL + "recent", 
