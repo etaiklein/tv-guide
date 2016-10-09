@@ -6,8 +6,8 @@ toastr.options = {
 }
 
 //set the base url for development or production
-// const baseURL = "http://localhost:3000/v1/" //development
-const baseURL = "https://wiki-scripts.herokuapp.com/v1/" //production
+const baseURL = "http://localhost:3000/v1/" //development
+// const baseURL = "https://wiki-scripts.herokuapp.com/v1/" //production
 
 //append the 10 most recently queried shows to the 'recent' list
 $.ajax({url: baseURL + "recent", 
@@ -29,6 +29,10 @@ $("#tv_guide_submit").click((event) => {
   event.preventDefault();
 
   let input = $("#tv_guide_input").val();
+  if (input == "" || input == null) {
+    toastr.error("Please enter a valid show name or wiki url");
+    return;
+  }
   let myurl;
 
   //hit the wiki endpoint if it's a wiki page -- else the name endpoint
