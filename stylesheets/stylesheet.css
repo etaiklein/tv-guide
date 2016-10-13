@@ -1,10 +1,5 @@
 .tv_guide_input {
   width: 80%;
-  font-size: 16px;
-}
-
-.tv_guide_submit {
-  font-size: 16px;
 }
 
 html {
@@ -13,6 +8,7 @@ html {
 
 #results {
   font-size: 10px;
+  overflow-x: scroll;
 }
 
 #secondary_content {
@@ -32,13 +28,13 @@ html {
   color: #eaeaea;
 }
 
-.instructions > div, .instructions > span, #results {
+.instructions > div, .instructions > span, ol > li, #results {
   font-size: 10px;
   color: #666;
 }
 
-.half-width {
-  width: 50%;
+.sidebar {
+  width: 30%;
 }
 
 .hidden {
@@ -48,9 +44,16 @@ html {
   overflow-y: hidden;
 }
 
+.flexible {
+  display: flex;
+}
+
 #main_content {
 	height: 100%;
+  width: 60%;
 	vertical-align: middle
+  display: flex;
+  margin-right: 25px;
 } 
 
 /* Footer */

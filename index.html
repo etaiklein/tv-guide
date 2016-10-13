@@ -20,57 +20,57 @@
     <header>
       <div class="container">
         <h1 class="blur">TV Guide</h1>
-        <h2 class="blur">A Calendar event for each new episode.</h2>
+        <h2 class="blur">Add your favorite TV Shows to your Google Calendar</h2>
       </div>
     </header>
 
-    <div class="container">
-      <section id="main_content">
+    <div class="container flexible">
+      <div id="main_content">
 
-        <div class="instructions blur"> 
-          Enter a Show title <span>to find an existing calendar </span>
-          <br>or a Wikipedia episode list <span>to create a new calendar</span>
-          <div>e.g. Steven Universe or 'https://en.wikipedia.org/wiki/List_of_Steven_Universe_episodes'</div>
-        </div>
-
-        <input class="tv_guide_input" id="tv_guide_input" placeholder="https://en.wikipedia.org/wiki/List_of_Steven_Universe_episodes" value="https://en.wikipedia.org/wiki/List_of_Steven_Universe_episodes">
-        </input>
-        <input class="tv_guide_submit" id="tv_guide_submit" type="submit" value="Submit">
-
-
-        <div id="results" class="blur hidden">
-          Your tv-guide(s):
-        </div>
-
-      </section>
-
-      <section id="secondary_content">
-        <div class="half-width" id="recently_searched">
-          <div class="instructions blur">
-            Recently searched shows
-              <div id="recent">
-              </div>
+      <section>
+          <div class="instructions blur"> 
+            1) enter your wiki
           </div>
-        </div>
-        
-        <div class="half-width" id="add_to_google_calendar">
+
+          <input class="tv_guide_input" id="tv_guide_input" placeholder="https://en.wikipedia.org/wiki/List_of_Steven_Universe_episodes" value="https://en.wikipedia.org/wiki/List_of_Steven_Universe_episodes">
+          </input>
+          <input class="tv_guide_submit" id="tv_guide_submit" type="submit" value="Submit">
+
+
+          <div id="results" class="blur hidden">
+            your tv-guide(s):
+          </div>
+        </section>
+
+        <section>
           <div id="google_instructions" class="instructions blur">
-            Add To Google Calendar
-            <div>for Nightly Schedule Updates</div>
-            <div>
-              <ol>
-                <li>Go to <a href="https://calendar.google.com">Google Calendar</a> (web view)</li>
-                <li>In the left column, click on the Add link in the Other Calendars section.</li>
-                <li>From the menu select Add by URL.</li>
-                <li>Enter the URL in the dialog box then click Add Calendar.</li>
-                <li>See <a href="http://visihow.com/Use_webcal_url_to_add_a_calendar_to_google_calendar"> visual instructions</a> for more details</li>
-              </ol>
-            </div>
+            2) add to google calendar
+            <ol>
+              <li>go to <a href="https://calendar.google.com">google calendar</a> (web view)</li>
+              <li>in the left column, click on the add link in the Other Calendars section.</li>
+              <li>from the menu select, add by URL.</li>
+              <li>enter the URL in the dialog box then click Add Calendar.</li>
+              <li>see <a href="http://visihow.com/Use_webcal_url_to_add_a_calendar_to_google_calendar"> visual instructions</a> for more details</li>
+            </ol>
           </div>
+        </section>
 
+        <section>
+          <div class="instructions blur">
+            3) voila, nightly calendar updates!
+          </div>
+        </section>
+
+      </div>
+
+      <div class="sidebar" id="secondary_content">
+
+        <div class="instructions blur">
+          Recent
+            <div id="recent">
+            </div>
         </div>
-
-      </section>
+      </div>
     </div>
 
     <div id="footer_wrap" class="outer">
